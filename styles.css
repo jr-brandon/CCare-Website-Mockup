@@ -3,17 +3,20 @@ body {
     padding: 0px;
 }
 
+.wrapper{
+    margin: 0px auto;
+    max-width: 1180px;
+}
+
 .container {
     margin: 0px 2rem;
-    max-width: 1180px;
 }
 
 .navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0px;
-    margin: 0px;
+    padding: 2rem 0px;
 }
 
 
@@ -40,7 +43,6 @@ ul.sponsorboxes li {
 span.logo {
     font-size: 24px;
     font-style: italic;
-    margin: 1rem;
 }
 
 header {
@@ -52,11 +54,6 @@ nav li {
     font-size: 20px;
 }
 
-
-.hero ul {
-    background: #FE8134;
-    border-radius: 4px;
-}
 
 .buttonsGroup {align-items: center;
     justify-content: flex-start;
