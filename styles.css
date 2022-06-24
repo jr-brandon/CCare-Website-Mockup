@@ -195,3 +195,30 @@ h3 {
     font-size: 2rem;
     color: #009999;
 }
+
+section.services {
+    padding: 12rem 0px 2rem;
+    margin-top: -12rem;
+    text-align: center;
+    background-color: #003C3D;
+}
+
+.services h2, .services p {
+    color: white;
+}
+
+.services h2::after {
+    background: white;
+}
+
+.servicesCardBox ul {
+    display: flex;flex-direction: column;
+}
+
+ul.servicesCardBox {
+    flex-direction: column;
+}
+
+.servicesCardBox li div {
+    width: 330px;
+}
