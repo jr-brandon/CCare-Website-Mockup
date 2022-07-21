@@ -19,6 +19,9 @@ body {
     padding: 2rem 0px;
 }
 
+img{
+    width: 100%;
+}
 
 a {
     text-decoration: none;
@@ -63,43 +66,55 @@ nav li {
 
 .buttons {
     background: #009999;
-    border-radius: 4px;
-    padding: 0.6rem .5rem;
+    border-radius: 2px;
+    padding: 0.6rem .75rem;
     display: inline-block;
 }
 
 h1 {
     font-size: 48px;
     margin: 0px 0px 1.5rem;
-    color: #009999;
+    color: white;
 }
 
-section.hero {
-    background: #F5F5F5;
+.accent{
+    font-style:italic;
+    background-color: #009999;
 }
 
 section.hero {
     width: 100%;
     margin: 0px;
     padding: 3rem 0px;
+    background-repeat: no-repeat;
+    background: linear-gradient(0deg, rgba(0, 60, 61, 0.8), rgba(0, 60, 61, 0.8)), url(./images/hero.jpg) no-repeat center center fixed;
+    background-size: cover;
 }
 
+section .hero-image{
+    width: 100%;
+    object-fit: fill;
+    position: absolute;
+}
 
 .hero p {
     margin: 1rem 0px;
+    color: white;
 }
 
 section.sponsor {
     padding: 2rem 0px;
     text-align: center;
-    background-color: lightgray;
+    background-color: white;
 }
 
 h4 {
     margin: 1rem 0px;
     font-size: 1.2rem;
+    font-weight: 500;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
+    color: #009999;
 }
 
 ul.sponorboxes {
@@ -125,7 +140,7 @@ li.secondaryButton {
 }
 
 .secondaryButton a {
-    color: black;
+    color: white;
 }
 
 section.features {
@@ -177,11 +192,28 @@ nav ul li a {
     margin: 3rem 0rem;
 }
 
+.cards h3{
+    margin: 0;
+}
+
+.featuresImage {
+    padding: 2rem;
+}
+
+.featuresImage img{
+    width: 60%;
+}
+
 .cards li {
     background: white;
     padding: 3rem 2rem;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     margin: 1rem 0px;
+    z-index: 1;
+}
+
+.cards p{
+    margin: 0px;
 }
 
 h3 {
@@ -190,10 +222,11 @@ h3 {
 }
 
 section.services {
-    padding: 12rem 0px 2rem;
-    margin-top: -12rem;
+    padding: 13rem 0px 10rem;
+    margin-top: -15rem;
     text-align: center;
     background-color: #003C3D;
+    position: relative;
 }
 
 .services h2, .services p {
@@ -213,14 +246,122 @@ ul.servicesBox {
 
 .servicesBox li{
     margin: 2rem 0px;
+    width: 100%
 }
 
-.servicesBox li div {
-    width: 300px;
-    height: 300px;
-    background-color:gray;
+.servicesBox li a{
+    width: 100%;
+}
+
+.servicesBox li div img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0px 25px;
+    height: 200px;
+}
+
+.servicesBox li div{
+    margin-bottom: -2rem;
 }
 
 .servicesBox li span{
-    background-color: black;
+    background: rgba(42, 163, 156, 0.7);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 1.5rem 0;
+    border-radius: 1rem;
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.services .buttons{
+    margin-top: 1.5rem;
+    padding: 1rem;
+}
+
+.services-button{
+    display: flex;
+    align-items: center;
+}
+
+.services-button span{
+    display: inline-flex;
+    margin: 0 0.5rem;
+}
+
+.services-button a{
+    font-size: 1.3rem;
+}
+
+.services-button span{
+    display: inline-flex;
+    margin: 0 0.5rem;
+}
+
+.wavesBorder{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+section.people{
+    padding: 2rem 0px;
+    text-align: center;
+    background-color:#ecffff
+}
+
+.people .arrow{
+    width: 5rem;
+    margin: 0 auto;
+}
+
+.portals {
+    flex-direction: column;
+    margin: 1rem 0px;
+    text-transform: uppercase;
+}
+
+.portals li{
+    margin: 0.5rem 0px;
+}
+
+.portal{
+    padding: 4rem 2rem;
+    font-size: 2.5rem;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.portal-1{
+    background-image:url(/images/claimProfessional.jpg);
+}
+
+.portal-2{
+    background-image: url(/images/injuredWorker.jpg);
+}
+
+.portal-3{
+    background-image: url(/images/networkProviders.jpg);
+}
+
+.portal::after{
+    content:"";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 153, 153, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(3px);
+}
+
+.portal-text{
+    position: relative;
+    z-index: 10;
 }
