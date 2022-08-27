@@ -1,6 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     margin: 0px;
     padding: 0px;
+    font-family: 'DM Sans', sans-serif
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Domine', serif;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0px 0px 1rem;
+    color: white;
+}
+
+h2 {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 38px;
+    color: #009999;
+    letter-spacing: .1rem;
+    position: relative;
+}
+
+h3 {
+    font-size: 2rem;
+    color: #009999;
+}
+
+h4 {
+    margin: 1rem 0px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    color: #009999;
+}
+
+p {
+    font-size: 1.2rem;
+    margin: 2rem auto;
+    line-height: 150%;
+}
+
+section{
+    text-align: center;
 }
 
 .wrapper{
@@ -20,7 +75,7 @@ body {
 }
 
 img{
-    width: 100%;
+    max-width: 100%;
 }
 
 a {
@@ -41,8 +96,6 @@ ul.sponsorboxes li {
     padding: 1rem;
 }
 
-
-
 .logo a{
     font-size: 24px;
     font-style: italic;
@@ -57,38 +110,39 @@ nav li {
     font-size: 20px;
 }
 
-
 .buttonsGroup {
-    align-items: center;
-    justify-content: flex-start;
     flex-wrap: wrap;
 }
 
 .buttons {
     background: #009999;
     border-radius: 2px;
-    padding: 0.6rem .75rem;
-    display: inline-block;
+    padding:  1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-h1 {
-    font-size: 48px;
-    margin: 0px 0px 1.5rem;
-    color: white;
+.buttonsGroup .buttons {
+    margin: .6rem 1rem 0px 0px;
 }
 
 .accent{
-    font-style:italic;
-    background-color: #009999;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 73%, rgba(0, 153, 153, 0.5) 50%);
 }
 
 section.hero {
+    text-align: left;
     width: 100%;
     margin: 0px;
-    padding: 3rem 0px;
+    padding: 5rem 0px;
     background-repeat: no-repeat;
     background: linear-gradient(0deg, rgba(0, 60, 61, 0.8), rgba(0, 60, 61, 0.8)), url(./images/hero.jpg) no-repeat center center fixed;
     background-size: cover;
+}
+
+.hero-text{
+    max-width: 550px;
 }
 
 section .hero-image{
@@ -98,7 +152,7 @@ section .hero-image{
 }
 
 .hero p {
-    margin: 1rem 0px;
+    margin: 0px auto 2rem;
     color: white;
 }
 
@@ -108,14 +162,6 @@ section.sponsor {
     background-color: white;
 }
 
-h4 {
-    margin: 1rem 0px;
-    font-size: 1.2rem;
-    font-weight: 500;
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
-    color: #009999;
-}
 
 ul.sponorboxes {
     justify-content: space-between;
@@ -144,31 +190,13 @@ li.secondaryButton {
 }
 
 section.features {
-    padding: 2rem 0px;
+    padding: 4rem 0px;
     text-align: center;
     background-color: #F5f5f5;
 }
 
-h2 {
-    margin: 0;
-    text-transform: uppercase;
-    font-size: 2rem;
-    line-height: 38px;
-    color: #009999;
-    letter-spacing: .1rem;
-    position: relative;
-}
-
-
-p {
-    font-size: 1.2rem;
-    line-height: 140%;
-    margin: 2rem 0px;
-}
-
-
-.buttonsGroup .buttons {
-    margin: .6rem .6rem 0px 0px;
+section.features h2{
+    margin-bottom: 1rem;
 }
 
 h2::after {
@@ -200,10 +228,6 @@ nav ul li a {
     padding: 2rem;
 }
 
-.featuresImage img{
-    width: 60%;
-}
-
 .cards li {
     background: white;
     padding: 3rem 2rem;
@@ -216,10 +240,6 @@ nav ul li a {
     margin: 0px;
 }
 
-h3 {
-    font-size: 2rem;
-    color: #009999;
-}
 
 section.services {
     padding: 13rem 0px 10rem;
@@ -315,8 +335,8 @@ section.people{
     background-color:#ecffff
 }
 
-.people .arrow{
-    width: 5rem;
+.arrow{
+    width: 4rem;
     margin: 0 auto;
 }
 
@@ -364,4 +384,77 @@ section.people{
 .portal-text{
     position: relative;
     z-index: 10;
+}
+
+section.buffer{
+    background-color:#ecffff;
+    padding-bottom: 2em;
+}
+
+section.testimonial{
+    padding: 3em 0px;
+    background: radial-gradient(51.43% 35.94% at 50% 50%, rgba(0, 153, 153, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(360deg, #009999 0.96%, rgba(0, 135, 137, 0.3) 48.11%, rgba(235, 255, 255, 1) 91.72%);
+}
+
+.quote{
+    position: relative;
+}
+
+.quote-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 3rem;
+}
+
+.quote-text h3{
+    margin: 0;
+}
+
+.quote-text p{
+    margin: 1rem 0;
+}
+
+.slider{
+    display: flex;
+    margin: 0 1rem;
+}
+
+.slider .line{
+    margin: 0.5rem;
+    flex: 1 1 150px;
+    border: 6px solid #EBFFFF;
+}
+
+.slider .active{
+    border-color:#003C3D;
+}
+
+section.stay-know{
+    padding: 3rem 0px;
+    border-top: solid 2rem #009999;
+    border-bottom: solid 2rem #009999;
+}
+
+section.stay-know p{
+    text-align: left;
+}
+
+section.news-events{
+    padding: 3rem 0px;
+    text-align: left;
+}
+
+.news-events h3{
+    color: black;
+    margin: 1rem 0px;
+    font-weight: 500;
+    font-size: 24px;    
+    line-height: 29px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+} 
+
+.news-box{
+    flex-direction: column;
 }
